@@ -67,6 +67,11 @@ TEMPLATES = [
     },
 ]
 
+
+LOGIN_REDIRECT_URL ='task_list'
+LOGOUT_REDIRECT_URL ='login'
+
+
 WSGI_APPLICATION = 'todo.wsgi.application'
 
 
