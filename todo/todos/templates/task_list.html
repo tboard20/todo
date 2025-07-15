@@ -14,7 +14,7 @@
         {%  for task in tasks %}
         <li>
            {{ task.title }} {% if task.completed %}Completed{% endif %}  
-            {% comment %} <a href="{% url 'task_delete' task_id %}">Delete Task</a> {% endcomment %}
+            <a href="{% url 'task_delete' task_id %}">Delete Task</a>
         </li>
            
 
