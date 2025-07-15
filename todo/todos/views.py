@@ -53,5 +53,5 @@ def task_create(request):
 @login_required
 def task_delete(request, task_id):
     task = get_object_or_404(Task, id=task_id, user=request.user)
-    task.delete
+    task.delete()
     return redirect('task_list')
