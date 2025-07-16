@@ -1,11 +1,14 @@
+{% load static %}
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Todo List</title>
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
 </head>
 <body>
+    <div class="cons">
     <h1> WELCOME {{user.username}}! </h1>
     <a href="{% url 'task_create' %}">Add a new Task</a>
     <form method="POST" action="{% url 'logout' %}">
@@ -26,5 +29,6 @@
         <li>No task yet</li>
         {% endfor %}
     </ul>
+    </div>
 </body>
 </html>
