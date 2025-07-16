@@ -95,3 +95,17 @@ label{
 input{
     width: 100%;
 }
+
+.cons{
+    background-color: #f7f7f7;
+    width: 30%;
+    box-shadow: 0 0 10px black;
+    padding: 1rem;
+    border-radius: 1rem;
+    margin: 140px auto ;
+    padding: 3%;
+}
+
+.login-form input{
+    width: 60%;
+}
