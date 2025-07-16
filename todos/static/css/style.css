@@ -1,3 +1,5 @@
+
+
 body{
     background-color: whitesmoke;
 }
@@ -108,4 +110,55 @@ input{
 
 .login-form input{
     width: 60%;
+}
+
+.display{
+    display: flex !important;
+    gap: 1rem !important;
+    justify-content: center;
+}
+
+.buttos{
+    background-color: #1d0db2 !important;
+    color: white !important;
+    height: 40px;
+    border: none;
+    border-radius: 0.3rem;
+}
+.buttos:hover{
+    background-color: black !important;
+}
+.tex{
+    color: white;
+    text-decoration: none;
+}
+
+
+
+.task-list{
+    padding-left: 0 !important;
+    margin: 0 !important;
+}
+
+.task-list li{
+    list-style-type: none;
+    background-color: #0d65b2;
+    padding: 10px;
+    border-radius: 0.4rem;
+    margin-bottom: 10px;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+}
+
+.task-list li:nth-child(even){
+    background-color: #578ac0;
+}
+
+.task-list i{
+    color: white;
+}
+
+.task-list i:hover{
+    color: #b3aa34;
 }

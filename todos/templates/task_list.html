@@ -6,21 +6,26 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Todo List</title>
     <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
 </head>
 <body>
     <div class="cons">
+        <img src="{% static 'img/Donedesk-2.png'%}" class="logos"  alt="">
     <h1> WELCOME {{user.username}}! </h1>
-    <a href="{% url 'task_create' %}">Add a new Task</a>
-    <form method="POST" action="{% url 'logout' %}">
-    {% csrf_token %}
-    <button type="submit">Logout</button>
-    </form>
+
+    <div class="display">
+        <button class="buttos"> <a href="{% url 'task_create' %}" class="tex">Add a new Task</a> </button>
+        <form method="POST" action="{% url 'logout' %}">
+        {% csrf_token %}
+        <button type="submit" class="buttos">Logout</button>
+        </form>
+    </div>
     <h3>Your Task for Today</h3>
-    <ul>
-        {%  for task in tasks %}
+    <ul class="task-list">
+        {% for task in tasks %}
         <li>
            {{ task.title }} {% if task.completed %}Completed{% endif %}  
-            <a href="{% url 'task_delete' task.id %}">Delete Task</a>
+            <a href="{% url 'task_delete' task.id %}" class="text-light"><i class="bi bi-trash3"></i></a>
         </li>
            
 
